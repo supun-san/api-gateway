@@ -17,3 +17,9 @@ spring:
           uri: lb://user-service
           predicates:
             - Path=/users/**
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8085/realms/micro-services
